@@ -1,0 +1,354 @@
+{
+ "flow": {
+  "screened": 300,
+  "excluded": 60,
+  "reasons": {
+   "Revision arthroplasty": 17,
+   "No adequate postoperative Grashey radiograph": 16,
+   "Acute proximal humerus fracture (<3 weeks)": 13,
+   "Age <50 years": 6,
+   "Infection/staged procedure": 5,
+   "Tumor resection": 3
+  },
+  "included": 240,
+  "completed_24mo": 207,
+  "lost": 33
+ },
+ "dsa_tertile_bounds": [
+  23.9,
+  44.4,
+  53.0,
+  76.0
+ ],
+ "followup": {
+  "median": 39.0,
+  "iqr": [
+   28.4,
+   52.5
+  ],
+  "total_person_years": 813.6
+ },
+ "missing": {
+  "bmi": 8,
+  "dxa_tscore": 73,
+  "preop_ases": 20,
+  "ases_2y": 33,
+  "ases_mcid": 46,
+  "fe_2y": 33,
+  "er_2y": 41
+ },
+ "lost_vs_retained": {
+  "age": {
+   "lost": 73.7,
+   "retained": 70.8,
+   "p": "0.024"
+  },
+  "preop_ases": {
+   "lost": 40.1,
+   "retained": 35.5,
+   "p": "0.099"
+  },
+  "dsa": {
+   "lost": 48.3,
+   "retained": 48.6,
+   "p": "0.885"
+  },
+  "lsa": {
+   "lost": 88.1,
+   "retained": 87.2,
+   "p": "0.589"
+  },
+  "asa_class==3": {
+   "lost_pct": 48.5,
+   "retained_pct": 25.6,
+   "p": "0.013"
+  },
+  "center==4": {
+   "lost_pct": 21.2,
+   "retained_pct": 15.9,
+   "p": "0.615"
+  }
+ },
+ "icc": [
+  {
+   "Measurement": "DSA (\u00b0)",
+   "Rater 1": "48.4\u00b110.1",
+   "Rater 2": "48.7\u00b110.3",
+   "ICC(2,1) (95% CI)": "0.953 (0.939-0.962)",
+   "Mean difference (95% LoA)": "0.22 (-5.92 to 6.36)"
+  },
+  {
+   "Measurement": "LSA (\u00b0)",
+   "Rater 1": "87.2\u00b18.7",
+   "Rater 2": "87.4\u00b18.9",
+   "ICC(2,1) (95% CI)": "0.937 (0.918-0.951)",
+   "Mean difference (95% LoA)": "0.19 (-5.93 to 6.30)"
+  },
+  {
+   "Measurement": "AGTD (mm)",
+   "Rater 1": "45.3\u00b17.2",
+   "Rater 2": "45.0\u00b17.2",
+   "ICC(2,1) (95% CI)": "0.949 (0.934-0.961)",
+   "Mean difference (95% LoA)": "-0.24 (-4.74 to 4.25)"
+  }
+ ],
+ "ases_cc": {
+  "n": 187,
+  "p_nonlin_dsa": "0.007",
+  "p_nonlin_lsa": "<0.001"
+ },
+ "ases_mi": {
+  "m": 20,
+  "n": 240,
+  "p_nonlin_dsa": "0.005",
+  "p_nonlin_lsa": "0.002"
+ },
+ "ases_mi_raw": {
+  "dsa": [
+   [
+    34.9,
+    -6.282,
+    -9.931,
+    -2.632
+   ],
+   [
+    41.6,
+    -2.613,
+    -5.1,
+    -0.126
+   ],
+   [
+    49.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   [
+    55.0,
+    -0.108,
+    -2.281,
+    2.066
+   ],
+   [
+    60.7,
+    -2.234,
+    -5.31,
+    0.842
+   ]
+  ],
+  "lsa": [
+   [
+    76.2,
+    -4.918,
+    -8.049,
+    -1.787
+   ],
+   [
+    81.8,
+    -1.263,
+    -3.513,
+    0.987
+   ],
+   [
+    87.4,
+    0.001,
+    -0.026,
+    0.028
+   ],
+   [
+    93.0,
+    -1.055,
+    -3.108,
+    0.999
+   ],
+   [
+    97.0,
+    -2.672,
+    -5.315,
+    -0.029
+   ]
+  ]
+ },
+ "ases_table": [
+  {
+   "Exposure": "DSA (\u00b0)",
+   "Value (percentile)": "34.9 (P10)",
+   "Unadjusted (CC)": "-7.3 (-11.0 to -3.6)",
+   "Adjusted, complete case": "-6.7 (-10.6 to -2.8)",
+   "Adjusted, multiple imputation": "-6.3 (-9.9 to -2.6)"
+  },
+  {
+   "Exposure": "DSA (\u00b0)",
+   "Value (percentile)": "41.6 (P25)",
+   "Unadjusted (CC)": "-3.1 (-5.7 to -0.6)",
+   "Adjusted, complete case": "-2.4 (-5.1 to 0.2)",
+   "Adjusted, multiple imputation": "-2.6 (-5.1 to -0.1)"
+  },
+  {
+   "Exposure": "DSA (\u00b0)",
+   "Value (percentile)": "49.0 (P50)",
+   "Unadjusted (CC)": "0 (reference)",
+   "Adjusted, complete case": "0 (reference)",
+   "Adjusted, multiple imputation": "0 (reference)"
+  },
+  {
+   "Exposure": "DSA (\u00b0)",
+   "Value (percentile)": "55.0 (P75)",
+   "Unadjusted (CC)": "0.1 (-2.2 to 2.4)",
+   "Adjusted, complete case": "-0.4 (-2.8 to 1.9)",
+   "Adjusted, multiple imputation": "-0.1 (-2.3 to 2.1)"
+  },
+  {
+   "Exposure": "DSA (\u00b0)",
+   "Value (percentile)": "60.7 (P90)",
+   "Unadjusted (CC)": "-2.2 (-5.5 to 1.0)",
+   "Adjusted, complete case": "-2.5 (-5.9 to 0.9)",
+   "Adjusted, multiple imputation": "-2.2 (-5.3 to 0.8)"
+  },
+  {
+   "Exposure": "LSA (\u00b0)",
+   "Value (percentile)": "76.2 (P10)",
+   "Unadjusted (CC)": "-5.4 (-8.7 to -2.1)",
+   "Adjusted, complete case": "-5.7 (-8.9 to -2.4)",
+   "Adjusted, multiple imputation": "-4.9 (-8.0 to -1.8)"
+  },
+  {
+   "Exposure": "LSA (\u00b0)",
+   "Value (percentile)": "81.8 (P25)",
+   "Unadjusted (CC)": "-1.7 (-4.1 to 0.7)",
+   "Adjusted, complete case": "-1.4 (-3.9 to 1.0)",
+   "Adjusted, multiple imputation": "-1.3 (-3.5 to 1.0)"
+  },
+  {
+   "Exposure": "LSA (\u00b0)",
+   "Value (percentile)": "87.4 (P50)",
+   "Unadjusted (CC)": "0 (reference)",
+   "Adjusted, complete case": "0 (reference)",
+   "Adjusted, multiple imputation": "0 (reference)"
+  },
+  {
+   "Exposure": "LSA (\u00b0)",
+   "Value (percentile)": "93.0 (P75)",
+   "Unadjusted (CC)": "-0.9 (-3.1 to 1.3)",
+   "Adjusted, complete case": "-1.4 (-3.6 to 0.9)",
+   "Adjusted, multiple imputation": "-1.1 (-3.1 to 1.0)"
+  },
+  {
+   "Exposure": "LSA (\u00b0)",
+   "Value (percentile)": "97.0 (P90)",
+   "Unadjusted (CC)": "-2.8 (-5.6 to 0.1)",
+   "Adjusted, complete case": "-3.4 (-6.4 to -0.5)",
+   "Adjusted, multiple imputation": "-2.7 (-5.3 to -0.0)"
+  }
+ ],
+ "dsa_peak": 51.8,
+ "lsa_peak": 87.3,
+ "fracture_overall": {
+  "events": 16,
+  "n": 240,
+  "risk": 6.7,
+  "median_time_mo": 5.4
+ },
+ "fracture": {
+  "by_tertile": [
+   {
+    "DSA tertile": "T1 (23.9-44.4\u00b0)",
+    "Events/N": "0/80",
+    "Risk (%)": "0.0"
+   },
+   {
+    "DSA tertile": "T2 (44.4-53.0\u00b0)",
+    "Events/N": "4/81",
+    "Risk (%)": "4.9"
+   },
+   {
+    "DSA tertile": "T3 (53.0-76.0\u00b0)",
+    "Events/N": "12/79",
+    "Risk (%)": "15.2"
+   }
+  ],
+  "or_unadj": [
+   3.95,
+   2.04,
+   7.63
+  ],
+  "or_adj": [
+   4.07,
+   2.07,
+   8.0
+  ],
+  "p_adj": "<0.001",
+  "p_nonlin": "0.642",
+  "risk40": 1.0,
+  "risk60": 14.7,
+  "risk40_ci": [
+   0.2,
+   2.5
+  ],
+  "risk60_ci": [
+   7.8,
+   22.9
+  ],
+  "rd": 13.6,
+  "rd_ci": [
+   6.8,
+   21.8
+  ],
+  "events_per_parameter": 4.0
+ },
+ "fracture_sens_tscore_mi": [
+  3.7,
+  1.88,
+  7.27
+ ],
+ "sensitivity": [
+  {
+   "Analysis": "Primary: multiple imputation",
+   "n": 240,
+   "LSA 10th vs median": "-4.9 (-8.0 to -1.8)",
+   "LSA 90th vs median": "-2.7 (-5.3 to -0.0)",
+   "DSA 90th vs median": "-2.2 (-5.3 to 0.8)",
+   "P nonlinearity LSA": "0.002"
+  },
+  {
+   "Analysis": "Complete-case analysis",
+   "n": 187,
+   "LSA 10th vs median": "-5.7 (-8.9 to -2.4)",
+   "LSA 90th vs median": "-3.4 (-6.4 to -0.5)",
+   "DSA 90th vs median": "-2.5 (-5.9 to 0.9)",
+   "P nonlinearity LSA": "<0.001"
+  },
+  {
+   "Analysis": "Exposure measured by rater 1 only",
+   "n": 187,
+   "LSA 10th vs median": "-6.0 (-9.1 to -2.9)",
+   "LSA 90th vs median": "-4.2 (-7.1 to -1.2)",
+   "DSA 90th vs median": "-2.3 (-5.6 to 1.1)",
+   "P nonlinearity LSA": "<0.001"
+  },
+  {
+   "Analysis": "Excluding fracture sequelae (MI)",
+   "n": 220,
+   "LSA 10th vs median": "-4.3 (-7.5 to -1.0)",
+   "LSA 90th vs median": "-2.3 (-5.0 to 0.5)",
+   "DSA 90th vs median": "-2.7 (-5.9 to 0.5)",
+   "P nonlinearity LSA": "0.010"
+  },
+  {
+   "Analysis": "Adding surgery year (MI)",
+   "n": 240,
+   "LSA 10th vs median": "-4.7 (-7.8 to -1.6)",
+   "LSA 90th vs median": "-2.8 (-5.4 to -0.1)",
+   "DSA 90th vs median": "-2.4 (-5.5 to 0.6)",
+   "P nonlinearity LSA": "0.002"
+  },
+  {
+   "Analysis": "Center as random intercept (CC)",
+   "n": 187,
+   "LSA 10th vs median": "-5.5 (-8.8 to -2.3)",
+   "LSA 90th vs median": "-3.4 (-6.4 to -0.5)",
+   "DSA 90th vs median": "-2.5 (-5.9 to 0.9)",
+   "P nonlinearity LSA": "<0.001"
+  }
+ ]
+}
