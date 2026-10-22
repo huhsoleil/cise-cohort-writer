@@ -1,4 +1,4 @@
-# Cohort_CiSE: cise-cohort-writer skill
+# cise-cohort-writer
 
 An Agent Skill that helps authors write a **cohort-study manuscript for *Clinics in Shoulder and Elbow* (CiSE)** from their own dataset and codebook, following the **STROBE statement for cohort studies** and the CiSE cohort manuscript template.
 
@@ -39,10 +39,10 @@ scripts/
 ### Skills CLI (Claude Code, Cursor, and other agents; listed on skills.sh)
 
 ```bash
-npx skills add huhsoleil/cohort_cise
+npx skills add huhsoleil/cise-cohort-writer
 ```
 
-Details page: https://skills.sh/huhsoleil/cohort_cise
+Details page: https://skills.sh/huhsoleil/cise-cohort-writer
 
 ### Claude app (upload)
 
