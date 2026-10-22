@@ -12,7 +12,8 @@ An Agent Skill that helps authors write a **cohort-study manuscript for *Clinics
 4. Runs reproducible analyses (fixed seed) and saves every number to `results.json`, tables and figures.
 5. Writes the manuscript in the CiSE template order (title, abstract, Introduction, Methods, Results, Discussion, back matter, CiSE reference style).
 6. Checks the STROBE items most often missed by CiSE 2026 cohort papers (bias, study size, missing data, loss to follow-up, sensitivity analyses, flow diagram, follow-up time, 95% CI, absolute risk, generalisability, funding).
-7. Delivers a completed STROBE checklist with locations.
+7. Selects recent, verified references (mainly from the last 5 years; older ones only when essential or as original method/guideline sources) without padding the list to the 30-reference limit.
+8. Delivers a completed STROBE checklist with locations and a reference audit table.
 
 ## Repository structure
 

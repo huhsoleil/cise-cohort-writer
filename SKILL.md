@@ -28,12 +28,14 @@ If the bundled files are unavailable, the essential content is summarized in thi
 
 1. **Every number in the manuscript must come from code run on the author's data in this session** and be traceable to a saved output (`results.json`, table CSV). Never estimate, round-trip from memory, or "illustrate" with invented values.
 2. **Never fabricate references.** Find each reference in PubMed (or the publisher's site), confirm authors, title, journal, year, volume, pages, then format in CiSE style. If a citation cannot be verified, leave `[citation needed]`.
-3. **Never invent administrative facts** (IRB numbers, dates, funding, author names, ORCID, consent procedures). Use bracketed placeholders and list them for the author.
-4. **Raw data stay untouched.** Work on a copy; record every recode in the analysis script.
-5. **Patient data must be de-identified** before analysis. If direct identifiers (names, registration numbers, exact birth dates, addresses) appear, stop and ask the author to remove them.
-6. **The bundled example is simulated.** It may be used only to demonstrate the workflow; never present its results as real findings or cite them.
-7. Use association language for observational results ("was associated with"), not causal claims, unless a causal design is justified explicitly.
-8. Write in formal academic English with sentence case headings and titles, following the template.
+3. **Cite recent literature.** Prefer references published within the last 5 years (counted from the current year). Exclude references older than 5 years unless they are essential to the conclusions or are the original source of a method, definition, classification, measurement instrument, or reporting guideline used in the study (e.g., STROBE, the original definition of an angle or scale). When a recent paper covers the same point, cite the recent one instead of the older one.
+4. **Do not pad the reference list.** CiSE allows up to 30 references for an Original Article; this is a maximum, not a target. Cite only references that directly support a statement. If few relevant recent papers exist, a shorter list (for example, 10-20) is acceptable.
+5. **Never invent administrative facts** (IRB numbers, dates, funding, author names, ORCID, consent procedures). Use bracketed placeholders and list them for the author.
+6. **Raw data stay untouched.** Work on a copy; record every recode in the analysis script.
+7. **Patient data must be de-identified** before analysis. If direct identifiers (names, registration numbers, exact birth dates, addresses) appear, stop and ask the author to remove them.
+8. **The bundled example is simulated.** It may be used only to demonstrate the workflow; never present its results as real findings or cite them.
+9. Use association language for observational results ("was associated with"), not causal claims, unless a causal design is justified explicitly.
+10. Write in formal academic English with sentence case headings and titles, following the template.
 
 ## Workflow
 
@@ -77,6 +79,7 @@ Follow `references/cise_cohort_template.md` heading by heading:
 - **Suggestions; Conclusion** (answer each hypothesis; no new results).
 - **Back matter**: ORCID; Authors' contributions (CRediT); Conflict of interest; Funding (with funder role, or "None"); Data availability (Dataset 1 ...); Acknowledgments; generative-AI use statement (tool, model, version, manufacturer, role); Supplementary materials.
 - **References** in CiSE style: [1] numbering by first citation; ≤6 authors listed, otherwise 3 + "et al."; NLM abbreviations; "2018;27:1226-34".
+- **Reference selection**: search PubMed with a publication-date filter for the last 5 years first; keep an older reference only if it is essential to the conclusions or is the original source of a method, definition, classification, instrument, or reporting guideline. Keep the list as short as the content requires (≤30; no padding).
 - Tables with self-explanatory titles, abbreviation footnotes, a)/b)/c) symbols; P as capital roman "P"; figure legends after the tables.
 
 ### Step 7. Weak-item gate (CiSE-specific)
@@ -95,6 +98,8 @@ Before delivering, confirm each of these is explicitly present, because most 202
 - [ ] 22 funding and funder role
 
 ### Step 8. STROBE self-check and delivery
+Produce a reference audit table (number, first author, year, age in years, verified in PubMed yes/no, and for any reference older than 5 years the reason it is kept: essential to conclusions or original source of method/definition/instrument/guideline). Remove older references without such a reason before delivery. Report the total number of references and the proportion published within the last 5 years.
+
 Produce `strobe_checklist_completed` (item, recommendation, "reported on page/section", or "not applicable" with reason). Deliver: manuscript (DOCX if requested, otherwise Markdown or the user's preferred document format), tables, figures, analysis script, `results.json`, dataset + codebook (as Dataset 1 / Supplement), completed STROBE checklist, and a short list of placeholders and unresolved questions for the author.
 
 ## Worked example (simulated data)
