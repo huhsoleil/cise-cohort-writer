@@ -34,7 +34,17 @@ scripts/
                                       multiple imputation, sensitivity analyses, flow diagram
 ```
 
-## Installation (Claude)
+## Installation
+
+### Skills CLI (Claude Code, Cursor, and other agents; listed on skills.sh)
+
+```bash
+npx skills add huhsoleil/cohort_cise
+```
+
+Details page: https://skills.sh/huhsoleil/cohort_cise
+
+### Claude app (upload)
 
 1. Download this repository as a ZIP (Code > Download ZIP), unzip, and re-zip the folder so that `SKILL.md` sits at the top level of a folder named `cise-cohort-writer`.
 2. In Claude, open **Customize > Skills > + > Create skill > Upload a skill** and upload the ZIP.
