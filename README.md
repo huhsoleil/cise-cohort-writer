@@ -55,3 +55,9 @@ python scripts/analysis_example.py examples/dataset.csv examples/output
 
 Sun Huh, Hallym University College of Medicine, Korea.
 Draft version 0.1 (October 2026). Feedback and issues are welcome.
+
+## License
+
+- Code in `scripts/`: MIT License (`LICENSE`).
+- Documentation, skill instructions, references, simulated data, and example outputs: CC BY 4.0 (`LICENSE-docs.md`).
+- The STROBE checklist is reproduced from the STROBE Initiative; cite von Elm E, et al. PLoS Med 2007;4:e296.
