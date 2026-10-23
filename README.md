@@ -1,3 +1,5 @@
+![Clinics in Shoulder and Elbow](assets/cise_banner.png)
+
 # cise-cohort-writer
 
 An Agent Skill that helps authors write a **cohort-study manuscript for *Clinics in Shoulder and Elbow* (CiSE)** from their own dataset and codebook, following the **STROBE statement for cohort studies** and the CiSE cohort manuscript template.
