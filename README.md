@@ -10,9 +10,9 @@ An Agent Skill that helps authors write a **cohort-study manuscript for *Clinics
 2. Audits the dataset and codebook (non-standard missing codes, structural blanks, derived-variable checks).
 3. Builds an analysis plan mapped to STROBE items 7-12e.
 4. Runs reproducible analyses (fixed seed) and saves every number to `results.json`, tables and figures.
-5. Writes the manuscript in the CiSE template order (title, abstract, Introduction, Methods, Results, Discussion, back matter, CiSE reference style).
+5. Writes the manuscript in the CiSE template order, following the STROBE Statement and its Explanation and Elaboration, with a main text of 2,000-3,000 words (title, abstract, Introduction, Methods, Results, Discussion, back matter, CiSE reference style).
 6. Checks the STROBE items most often missed by CiSE 2026 cohort papers (bias, study size, missing data, loss to follow-up, sensitivity analyses, flow diagram, follow-up time, 95% CI, absolute risk, generalisability, funding).
-7. Selects recent, verified references (mainly from the last 5 years; older ones only when essential or as original method/guideline sources) without padding the list to the 30-reference limit.
+7. Selects recent, verified references from PubMed (last 3 years first, extended to 5 years when needed; papers older than 5 years only when necessary; older than 10 years only for indispensable methodological sources) without padding the list to the 30-reference limit.
 8. Delivers a completed STROBE checklist with locations and a reference audit table.
 
 ## Repository structure
@@ -21,6 +21,8 @@ An Agent Skill that helps authors write a **cohort-study manuscript for *Clinics
 SKILL.md                              Skill instructions
 references/
   strobe_cohort_checklist.md          STROBE cohort checklist
+  strobe_2007.md                      STROBE Statement (von Elm et al., PLoS Med 2007;4:e296)
+  strobe_ee.md                        STROBE Explanation and Elaboration (Vandenbroucke et al., PLoS Med 2007;4:e297)
   cise_cohort_template.md             CiSE cohort manuscript template
   cise_journal_profile.md             CiSE 2026 design mix, weak STROBE items, formal rules
 examples/
