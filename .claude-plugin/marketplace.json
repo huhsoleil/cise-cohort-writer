@@ -1,0 +1,13 @@
+{
+  "name": "huhsoleil-writing-skills",
+  "description": "Manuscript-writing skills for authors of health science journals, by Sun Huh",
+  "owner": { "name": "Sun Huh", "url": "https://github.com/huhsoleil" },
+  "plugins": [
+    {
+      "name": "cise-cohort-writer",
+      "source": "./",
+      "description": "Writes STROBE-compliant cohort-study manuscripts for Clinics in Shoulder and Elbow (CiSE) from the author's dataset and codebook.",
+      "version": "1.1.0"
+    }
+  ]
+}

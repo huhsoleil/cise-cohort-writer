@@ -1,0 +1,11 @@
+{
+  "name": "cise-cohort-writer",
+  "displayName": "CiSE Cohort Writer",
+  "version": "1.1.0",
+  "description": "Writes STROBE-compliant cohort-study manuscripts for Clinics in Shoulder and Elbow (CiSE) from the author's own dataset and codebook, with reproducible analysis, tables, figures, verified recent references, and a completed STROBE checklist.",
+  "author": { "name": "Sun Huh", "url": "https://github.com/huhsoleil" },
+  "homepage": "https://github.com/huhsoleil/cise-cohort-writer",
+  "repository": "https://github.com/huhsoleil/cise-cohort-writer",
+  "license": "MIT",
+  "keywords": ["STROBE", "cohort study", "manuscript writing", "orthopedics", "shoulder", "elbow", "CiSE"]
+}

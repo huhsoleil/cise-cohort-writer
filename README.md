@@ -17,29 +17,48 @@ An Agent Skill that helps authors write a **cohort-study manuscript for *Clinics
 
 ## Repository structure
 
+This repository is both a Claude **plugin** and a plugin **marketplace**.
+
 ```
-SKILL.md                              Skill instructions
-references/
-  strobe_cohort_checklist.md          STROBE cohort checklist
-  strobe_2007.md                      STROBE Statement (von Elm et al., PLoS Med 2007;4:e296)
-  strobe_ee.md                        STROBE Explanation and Elaboration (Vandenbroucke et al., PLoS Med 2007;4:e297)
-  cise_cohort_template.md             CiSE cohort manuscript template
-  cise_journal_profile.md             CiSE 2026 design mix, weak STROBE items, formal rules
-examples/
-  dataset.csv                         Simulated multicenter RTSA cohort (240 patients, 38 variables)
-  code_book.csv                       Codebook (variables + study information)
-  example_manuscript.md               Example manuscript in the CiSE template, tagged with STROBE items
-  output/                             Tables, figures, results.json from the example analysis
-scripts/
-  simulate_example_data.py            Regenerates examples/dataset.csv
-  build_example_codebook.py           Regenerates examples/code_book.csv
-  analysis_example.py                 ICC, restricted cubic splines, multivariable models,
+.claude-plugin/
+  plugin.json                         Plugin manifest
+  marketplace.json                    Marketplace manifest (lists this plugin)
+skills/cise-cohort-writer/
+  SKILL.md                            Skill instructions
+  references/
+    strobe_cohort_checklist.md        STROBE cohort checklist
+    strobe_2007.md                    STROBE Statement (von Elm et al., PLoS Med 2007;4:e296)
+    strobe_ee.md                      STROBE Explanation and Elaboration (Vandenbroucke et al., PLoS Med 2007;4:e297)
+    cise_cohort_template.md           CiSE cohort manuscript template
+    cise_journal_profile.md           CiSE 2026 design mix, weak STROBE items, formal rules
+  examples/
+    dataset.csv                       Simulated multicenter RTSA cohort (240 patients, 38 variables)
+    code_book.csv                     Codebook (variables + study information)
+    example_manuscript.md             Example manuscript in the CiSE template, tagged with STROBE items
+    output/                           Tables, figures, results.json from the example analysis
+  scripts/
+    simulate_example_data.py          Regenerates examples/dataset.csv
+    build_example_codebook.py         Regenerates examples/code_book.csv
+    analysis_example.py               ICC, restricted cubic splines, multivariable models,
                                       multiple imputation, sensitivity analyses, flow diagram
 ```
 
 ## Installation
 
-### Skills CLI (Claude Code, Cursor, and other agents; listed on skills.sh)
+### Claude app (claude.ai, Claude desktop) — add as a marketplace
+
+1. Open **Customize > Plugins > Add > Add marketplace**.
+2. Choose **Add from a repository** and enter `huhsoleil/cise-cohort-writer`. Turn on automatic sync to receive updates.
+3. Install **cise-cohort-writer** from the marketplace. Code execution must be enabled (Settings > Capabilities).
+
+### Claude Code
+
+```bash
+claude plugin marketplace add huhsoleil/cise-cohort-writer
+claude plugin install cise-cohort-writer@huhsoleil-writing-skills
+```
+
+### Skills CLI (other agents; listed on skills.sh)
 
 ```bash
 npx skills add huhsoleil/cise-cohort-writer
@@ -47,18 +66,13 @@ npx skills add huhsoleil/cise-cohort-writer
 
 Details page: https://skills.sh/huhsoleil/cise-cohort-writer
 
-### Claude app (upload)
-
-1. Download this repository as a ZIP (Code > Download ZIP), unzip, and re-zip the folder so that `SKILL.md` sits at the top level of a folder named `cise-cohort-writer`.
-2. In Claude, open **Customize > Skills > + > Create skill > Upload a skill** and upload the ZIP.
-3. Make sure code execution is enabled (Settings > Capabilities).
-
 Then ask, for example: *"Use the cise-cohort-writer skill to analyze my dataset.csv and codebook.csv and draft a CiSE cohort manuscript."*
 
 ## Reproducing the example
 
 ```bash
 pip install numpy pandas scipy statsmodels matplotlib
+cd skills/cise-cohort-writer
 python scripts/simulate_example_data.py examples          # optional: regenerate data
 python scripts/build_example_codebook.py examples         # optional: regenerate codebook
 python scripts/analysis_example.py examples/dataset.csv examples/output
@@ -71,6 +85,6 @@ Draft version 0.1 (October 2026). Feedback and issues are welcome.
 
 ## License
 
-- Code in `scripts/`: MIT License (`LICENSE`).
+- Code in `skills/cise-cohort-writer/scripts/`: MIT License (`LICENSE`).
 - Documentation, skill instructions, references, simulated data, and example outputs: CC BY 4.0 (`LICENSE-docs.md`).
 - The STROBE checklist is reproduced from the STROBE Initiative; cite von Elm E, et al. PLoS Med 2007;4:e296.
